@@ -1,0 +1,70 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/chai": "^4.2.14",
+    "@types/cors": "^2.8.9",
+    "@types/express": "^4.17.9",
+    "@types/express-fileupload": "^1.1.6",
+    "@types/fs-extra": "^9.0.5",
+    "@types/immutable": "^3.8.7",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/kurento-client": "^6.14.2",
+    "@types/md5": "^2.2.1",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.17.4",
+    "@types/password-hash": "^1.2.20",
+    "@types/socket.io": "^2.1.12",
+    "@types/uuid": "^8.3.0",
+    "@types/winston": "^2.4.4",
+    "body-parser": "^1.19.0",
+    "bufferutil": "^4.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "firebase": "^8.2.9",
+    "fs-extra": "^9.0.1",
+    "immutable": "^4.0.0-rc.12",
+    "jsonwebtoken": "^8.5.1",
+    "kurento-client": "^6.15.0",
+    "md5": "^2.3.0",
+    "mocha": "^8.2.1",
+    "mongoose": "^5.10.3",
+    "node-ssh": "^11.1.1",
+    "password-hash": "^1.2.2",
+    "socket.io": "^3.0.4",
+    "typescript": "^4.1.3",
+    "uuid": "^8.3.2",
+    "winston": "^3.3.3",
+    "ws": "^7.4.1"
+  },
+  "scripts": {
+    "start": "set HTTP=true&& set IsLocalhost=true&& gulp default && node ./dist/app",
+    "start-https": "set IsLocalhost=true&& gulp default && node ./dist/app",
+    "start-prod": "gulp default && node ./dist/app",
+    "start-prod-watch": "gulp default && pm2 start ./dist/app.js --watch",
+    "debug": "gulp default && node debug ./dist/server && help",
+    "start-turn": "sudo turnserver --verbose --lt-cred-mech --user anticafe-turn:anticafe-turn4444 --realm \"anticafeRealm\" --no-dtls --no-tls --listening-port 2222",
+    "build": "gulp",
+    "deploy": "node ./deploy/deploy",
+    "load-logs": "node ./deploy/load-logs",
+    "media-service-restart": "node ./deploy/restart-turn",
+    "mongopush": "node ./deploy/mongopush",
+    "mongoload": "node ./deploy/mongoload"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1"
+  }
+}

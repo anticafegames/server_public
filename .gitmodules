@@ -1,0 +1,3 @@
+[submodule "private-keys"]
+	path = private-keys
+	url = https://github.com/anticafegames/private-keys

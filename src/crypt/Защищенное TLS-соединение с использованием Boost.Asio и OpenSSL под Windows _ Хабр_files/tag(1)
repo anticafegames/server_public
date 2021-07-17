@@ -1,0 +1,19 @@
+rowr = window.rowr || {cmd: []};
+(function (c, cb) {
+  var d = document, s = d.createElement('script'), x, t, q = [];
+  s.type = 'text/javascript';
+  s.async = 1;
+  s.src = 'https://cdn-plus.roxot-panel.com/roxot-wrapper/js/roxot-wrapper.js';
+  for (x in c) q.push(x + '=' + c[x].join(','));
+  s.src += q.join('&');
+  t = document.getElementsByTagName('head')[0];
+  t.insertBefore(s, t.firstChild);
+  if (cb) {
+    cb.call();
+  }
+})({}, function () {
+  rowr.cmd.push(function () {
+    rowr.setConfig({"prebid":{"adjustment":{"mytarget":0.1,"rtbhouse":0.85,"otm":0.85,"rubicon":0.8,"getintent":0.8}},"adfox":{"hb":{"biddersMap":{"myTarget":"1168310","betweenDigital":"1167588","criteo":"1171975"},"timeout":700}},"refreshTimeSeconds":100000});
+    rowr.setAdsConfig({"d53b9311-abbc-4942-b96d-0b2837ecf81e":{"adServersConfig":[{"name":"google","tagId":"\/106064978\/AdX_Plus\/habr.com\/Leaderboard_aa__","sizes":[[728,90]]},{"name":"yandex","tagId":"R-A-451811-13","sizes":[[728,90]]}],"details":{"tagId":"d53b9311-abbc-4942-b96d-0b2837ecf81e","tagTitle":"Leaderboard_aa","placement":"Leaderboard_aa"},"options":{"limits":{"refreshTimeSeconds":1000000,"visibleSeconds":1000000}}}});
+  });
+});

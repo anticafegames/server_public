@@ -1,0 +1,1 @@
+import './games/register-games'

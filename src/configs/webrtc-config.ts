@@ -1,0 +1,1 @@
+export const kurentoUrl = 'ws://84.201.185.98:8888/kurento'

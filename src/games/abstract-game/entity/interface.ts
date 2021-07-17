@@ -1,0 +1,1 @@
+export type gameState = 'prepare' | 'game'

@@ -1,0 +1,1 @@
+export type gameKey = 'whoAmI' | 'crocodile'
