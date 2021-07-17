@@ -1,6 +1,7 @@
 const node_ssh = require('node-ssh');
 const fs = require('fs')
 const { NodeSSH } = require('node-ssh')
+const path = require('path')
 
 const ssh = new NodeSSH()
 
